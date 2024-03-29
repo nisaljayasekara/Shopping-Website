@@ -1,0 +1,275 @@
+header{
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 70px;
+}
+
+header nav ul li {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+header nav ul li::before {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: #1a17d3; 
+    transition: width 1s; 
+}
+
+header nav ul li:hover::before {
+    width: 100%;
+}
+
+header nav ul li:hover{
+    transition: 1s;
+    color: #5db455;
+}
+
+
+header nav :nth-child(3){
+    display: flex;
+    gap: 40px;
+}
+
+header nav :nth-child(3) div{
+    background-color: #5db455;
+    border-radius: 50%;
+}
+
+header nav :nth-child(3)  i{
+    font-size: 15px;
+    color: #ffffff;
+    padding: 20px;
+}
+
+header nav #mobileBar i{
+    font-size: 30px;
+    color: #3f3f3f;
+}
+
+header nav #mobileBar{
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #000;
+    font-family: "Inter", sans-serif;
+}
+
+section{
+    position: absolute;
+    top: 150px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    z-index: -1;
+}
+
+.pic{
+    padding: 50px;
+    padding-left: 10vh;
+     
+}
+
+.mainImg {
+    width: 79%;
+    margin-left: 9vh;
+    height: auto;
+   
+}
+
+.mainImg:hover{
+    cursor: zoom-in;
+}
+
+.pic > div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 9vh;
+    gap: 7px;
+}
+
+
+.pic > div img{
+    width: 21.5%;
+   
+}
+
+section > :last-child{
+    padding: 50px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section > :last-child h1{
+    font-size: 150%;
+    font-weight: 400;
+    letter-spacing: 1.44px;
+}
+
+section > :last-child h2{
+    font-size: 350%;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+section > :last-child h2 span{
+    color: #5db455;
+}
+
+section > :last-child h3{
+    font-size: 300%;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+select{
+    border: 3px solid #575757;
+    font-size: 120%;
+    letter-spacing: .5px;
+    padding: 10px 30px;
+    width: 13%;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #b6ffb0; /* color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5db455;
+    border-radius: 8px; /* color of the thumb */
+}
+
+input{
+    border: 3px solid #575757;
+    font-size: 120%;
+    letter-spacing: .5px;
+    width: 9%;
+    padding: 20px 10px;
+}
+
+section button{
+    background-color: #1e7c65;
+    border: 1px solid #f8f9fa;
+    border-radius: 5px;
+    padding: 20px 30px;
+    color: #ffff;
+    font-size: 120%;
+    margin-left: 20px;
+}
+
+section .dis{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+section .dis h1{
+    font-size: 180%;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+section .dis p{
+    font-size: 140%;
+    font-weight: 400;
+    width: 70%;
+    letter-spacing: 0.5px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1440px) {
+    section > :last-child h2 {
+        font-size: 260%;
+    }
+
+    section > :last-child h3 {
+        font-size: 210%;
+    }
+
+    select {
+        font-size: 120%;
+        width: 21%;
+    }
+
+    section .dis h1 {
+        font-size: 150%;
+    }
+
+    section .dis p {
+        font-size: 120%;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 768px){
+    header nav ul{
+        display: none;
+    }
+
+    header nav :nth-child(3){
+        display: none;
+    }
+
+    header nav #mobileBar{
+        display: block;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 425px){
+
+
+}
+
+@media screen and (max-width: 375px){
+
+}
+
+@media screen and (max-width: 320px){
+
+    header nav #mobileBar {
+        display: block;
+        margin-right: 37px;
+    }
+}
